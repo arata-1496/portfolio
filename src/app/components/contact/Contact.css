@@ -1,0 +1,78 @@
+.contact {
+  margin-top: 20vw;
+  width: 100%;
+  position: relative;
+}
+.contact-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+.contact-text {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: var(--fontsize-p);
+  color: var(--color-more-deep);
+  margin-bottom: 60px;
+}
+
+/* form */
+.contact-form {
+  width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* row */
+.contact-form > div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* label */
+.contact-form label {
+  width: 80px;
+  font-family: var(--font-sub);
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--color-deep);
+  text-align: left;
+}
+/* input */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 480px;
+  box-sizing: border-box;
+  background: var(--color-more-light);
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-more-deep);
+}
+
+.contact-form textarea {
+  height: 200px;
+  resize: none;
+}
+
+/* button */
+.contact-form button {
+  width: 200px;
+  height: 44px;
+  margin: 40px auto 0;
+  border: none;
+  border-radius: 15px;
+  background: var(--color-normal);
+  color: var(--color-white);
+  font-family: var(--font-sub);
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px var(--color-deep);
+}
