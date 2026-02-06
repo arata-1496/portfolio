@@ -2,6 +2,16 @@ import Link from "next/link";
 import { WorksDate } from "../../data/WorksDate";
 import Image from "next/image";
 
+// 追加分
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 const WorksList = ({ limit }) => {
   const list = limit ? WorksDate.slice(0, limit) : WorksDate;
 
