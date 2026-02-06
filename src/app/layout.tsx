@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Noto_Sans_JP, Heebo } from "next/font/google";
 import "./globals.css";
+import "./legacy-styles.css";
 
 const bebas = Bebas_Neue({
   subsets: ["latin"],

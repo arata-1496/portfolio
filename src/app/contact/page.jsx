@@ -3,9 +3,11 @@ import Layout from "../components/Layout";
 
 const ContactPage = () => {
   return (
-    <Layout pageType="other">
-      <Contact />
-    </Layout>
+    <div className="background-wave">
+      <Layout pageType="other">
+        <Contact />
+      </Layout>
+    </div>
   );
 };
 

@@ -25,7 +25,6 @@ const Header = ({ pageType }) => {
             <li>
               <Link href="/contact">CONTACT</Link>
             </li>
-            {/* <li>MODE</li> */}
           </ul>
         </nav>
       </div>

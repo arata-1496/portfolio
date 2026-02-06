@@ -3,11 +3,13 @@ import Layout from "../components/Layout";
 
 const ProfilePage = () => {
   return (
-    <Layout pageType="other">
-      <div className="profile-page">
-        <Profile />
-      </div>
-    </Layout>
+    <div className="background-wave">
+      <Layout pageType="other">
+        <div className="profile-page">
+          <Profile />
+        </div>
+      </Layout>
+    </div>
   );
 };
 

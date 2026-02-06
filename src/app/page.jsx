@@ -5,11 +5,14 @@ import Contact from "./components/contact/Contact";
 
 const Home = () => {
   return (
-    <Layout pageType="main">
-      <Profile />
-      <WorksSection />
-      <Contact />
-    </Layout>
+    <div>
+      <div className="main-wave" />
+      <Layout pageType="main">
+        {/* <Profile /> */}
+        {/* <WorksSection /> */}
+        {/* <Contact /> */}
+      </Layout>
+    </div>
   );
 };
 

@@ -4,14 +4,16 @@ import WorksList from "../components/Works/WorksList";
 
 const WorksPage = () => {
   return (
-    <Layout pageType="other">
-      <section className="works">
-        <SectionTitle title="WORKS" align="right" />
-        <div className="works-inner">
-          <WorksList />
-        </div>
-      </section>
-    </Layout>
+    <div className="background-wave">
+      <Layout pageType="other">
+        <section className="works">
+          <SectionTitle title="WORKS" align="right" />
+          <div className="works-inner">
+            <WorksList />
+          </div>
+        </section>
+      </Layout>
+    </div>
   );
 };
 

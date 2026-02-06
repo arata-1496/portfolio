@@ -48,7 +48,7 @@
 .contact-form textarea {
   width: 480px;
   box-sizing: border-box;
-  background: var(--color-more-light);
+  background: var(--color-light);
   border: none;
   border-radius: 5px;
   padding: 6px 10px;
