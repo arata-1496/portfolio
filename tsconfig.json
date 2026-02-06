@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/app/page.jsx"  ],
+, "src/app/page.jsx", "components/ui/button.jsx", "components/ui/dialog.jsx"  ],
   "exclude": ["node_modules"]
 }
