@@ -8,6 +8,17 @@ module.exports = {
 		],
   theme: {
   	extend: {
+			//アニメーション
+			keyframes: {
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+			},
+			animation: {
+				'fade-in': 'fade-in 1.5s ease-out',
+				'fade-in-3s-delay-0.5s': 'fade-in 3s ease-out 0.5s forwards',
+			},
 			// カスタムフォント
 			fontFamily: {
 				bebas: ['var(--font-bebas)'],

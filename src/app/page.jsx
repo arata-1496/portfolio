@@ -21,7 +21,7 @@ const Home = () => {
           width={416}
           height={200}
           alt="Portfolio Logo"
-          className="w-4/5 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-[600px] 2xl:w-[700px] max-w-4xl h-auto"
+          className="w-4/5 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-[600px] 2xl:w-[700px] max-w-4xl h-auto opacity-0 animate-fade-in-3s-delay-0.5s"
           priority
         />
       </div>
