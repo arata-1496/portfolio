@@ -1,13 +1,17 @@
-import Profile from "../components/Profile/profile";
 import Layout from "../components/Layout";
+import Profile from "../components/Profile/profile";
 
 const ProfilePage = () => {
   return (
-    <div className="background-wave">
+    <div
+      className="min-h-screen bg-no-repeat bg-contain"
+      style={{
+        backgroundImage: 'url("/MV/wave-brower.svg")',
+        backgroundPosition: "top 200px center",
+      }}
+    >
       <Layout pageType="other">
-        <div className="profile-page">
-          <Profile />
-        </div>
+        <Profile />
       </Layout>
     </div>
   );

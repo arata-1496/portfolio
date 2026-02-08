@@ -2,23 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.main-wave{
-  background-image: url("/MV/wave-brower1.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center 15vh ;
-  width: 100%;
-  height: 100vh;
-}
-.background-wave{
-  background-image: url("/MV/wave-brower.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top ;
-  width: 100%;
-  /* height: 100vh; */
-}
 
+body {
+  background-color: #fafafa;
+}
 
 @layer base {
   :root {

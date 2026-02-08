@@ -1,21 +1,20 @@
 import SectionTitle from "../topPage/SectionTitle";
 import Image from "next/image";
-import "./Profile.css";
 
 const Profile = () => {
   return (
-    <section className="profile">
+    <section className="mt-32 md:mt-40 lg:mt-48 w-full min-h-full relative">
       <SectionTitle title="PROFILE" />
-      <div className="profile-inner">
-        <div className="profile-content">
+      <div className="max-w-7xl mx-auto pt-24 md:pt-32 lg:pt-40 px-4 md:px-8">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
           <Image
-            className="profile-content__image"
+            className="w-full md:w-[382px] h-auto md:h-[264px] bg-[#c1d4d9] rounded-[10px] object-cover"
             src="/works/abc/thumb.jpg" //ダミーimage
             width={382}
             height={264}
             alt=""
           />
-          <div className="profile-content__text">
+          <div className="w-full md:max-w-sm flex flex-col justify-center gap-6 text-center font-noto text-base leading-loose tracking-wide text-more-deep">
             <p>
               エンジニア志望
               <br />

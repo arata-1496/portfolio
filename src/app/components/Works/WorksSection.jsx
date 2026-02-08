@@ -1,35 +1,34 @@
 import SectionTitle from "../topPage/SectionTitle";
-import WorksList from "./WorksList";
 import Link from "next/link";
 import Image from "next/image";
+import WorksCarousel from "./WorksCarousel";
 
 const WorksSection = () => {
   return (
-    <section className="works">
+    <section className="mt-32 md:mt-40 lg:mt-48 w-full relative pt-24 md:pt-32 lg:pt-40">
       <SectionTitle title="WORKS" align="right" />
-      <div className="works-inner">
-        <div className="works-content">
-          <WorksList limit={3} />
+
+      <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-20">
+        <div className="w-full relative">
+          <WorksCarousel limit={3} />
         </div>
-        <div className="works-actions">
-          <div className="works-side">
-            <div className="works-detail__sideButton">
-              <button>←</button>
-              <button>→</button>
-            </div>
-          </div>
-          <div className="works-more">
-            <Link className="works-more__text" href="/works">
+
+        <div className="flex flex-col items-center mt-12 md:mt-16">
+          <Link
+            href="/works"
+            className="flex flex-col items-center gap-1 group"
+          >
+            <span className="font-bebas text-h3 text-more-deep group-hover:text-normal transition-colors">
               MORE
-            </Link>
+            </span>
             <Image
               src="/MV/waves-small.svg"
               width={78}
               height={10}
               alt=""
-              className="works-more__waves"
+              className="w-auto h-auto"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </section>

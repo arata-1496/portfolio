@@ -8,12 +8,33 @@ module.exports = {
 		],
   theme: {
   	extend: {
+			// カスタムフォント
+			fontFamily: {
+				bebas: ['var(--font-bebas)'],
+				noto: ['var(--font-noto)'],
+				heebo: ['var(--font-heebo)'],
+			},
+			// カスタムフォントサイズ
+			fontSize: {
+				'h1': '128px',
+				'h2': '96px',
+				'h3': '32px',
+				'p': '16px',
+			},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+				//カスタムカラー
+				'more-deep': '#011526',
+				'deep': '#204359',
+				'normal': '#5a798c',
+				'light': '#6593a6',
+				'more-light': '#c1d4d9',
+				'p-white': '#fafafa',
+				//デフォルト設定
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
