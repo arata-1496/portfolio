@@ -10,6 +10,8 @@ import {
   DialogTrigger,
 } from "@/app/components/ui/dialog";
 import { useState } from "react";
+import Link from "next/link";
+import { ExternalLink } from "lucide-react";
 
 const WorksCard = ({ work }) => {
   const [currentIndex, setCurrentIndex] = useState(
@@ -39,8 +41,9 @@ const WorksCard = ({ work }) => {
               alt={work.title}
               priority
             />
+
             <div className="absolute right-4 bottom-3 flex gap-1.5">
-              {work.logos.map((logo, index) => {
+              {work.logos.slice(0, 3).map((logo, index) => {
                 return (
                   <Image
                     key={index}
@@ -70,13 +73,36 @@ const WorksCard = ({ work }) => {
         <div className="space-y-6">
           {/* 画像 */}
           <div className="relative w-full h-64 md:h-80 rounded-lg overflow-hidden">
-            <Image
-              src={currentWork.thumb}
-              fill
-              className="object-cover"
-              alt={currentWork.title}
-              priority
-            />
+            {currentWork.url ? (
+              // URLがある場合：リンク付き画像
+              <a
+                href={currentWork.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full h-full relative group"
+              >
+                <Image
+                  src={currentWork.thumb}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  alt={currentWork.title}
+                  priority
+                />
+                {/* ホバー時のオーバーレイ */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                  <ExternalLink className="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              </a>
+            ) : (
+              // URLがない場合：通常の画像
+              <Image
+                src={currentWork.thumb}
+                fill
+                className="object-cover"
+                alt={currentWork.title}
+                priority
+              />
+            )}
           </div>
 
           {/* ロゴ */}
