@@ -1,22 +1,21 @@
 export const WorksDate = [
   {
     id: 1,
-    slug: "weather-app",
-    title: "weather app",
-    thumb: "/works/weather/thumb.jpg",
+    slug: "portfolio",
+    title: "Portfolio",
+    thumb: "/works/portfolio/thumb.svg",
     logos: [
       "/works/logos/javascript.svg",
       "/works/logos/react.svg",
       "/works/logos/nextjs.svg",
+      "/works/logos/shadcn.png",
     ],
     detail: {
-      about: `お天気アプリ。
-      昨日の天気と比べて変化を見たい人に向けて作成しました。
-      また背景が現在の天気を反映して変化するため視覚的に天気を認識しやすくなっています。`,
-      improvements: [
-        "画像のレパートリーが少なく、より天気の詳細に関わる画像にすればよかった。",
-        "動く画像を入れてよりリッチにしたかった",
-      ],
+      about: `ポートフォリオ。
+      構想からデザイン、実装まで一から制作しました。
+      海や波をイメージしてシンプルかつリッチに感じるように心がけました。
+      shadcnやtailwindなどコンポーネントを使用しより仕事に`,
+      improvements: ["", "動く画像を入れてよりリッチにしたかった"],
     },
   },
   {
@@ -59,6 +58,26 @@ export const WorksDate = [
     logos: ["/works/logos/github.svg", "/works/logos/typescript.svg"],
     detail: {
       about: `ABCアプリ。
+      昨日の天気と比べて変化を見たい人に向けて作成しました。
+      また背景が現在の天気を反映して変化するため視覚的に天気を認識しやすくなっています。`,
+      improvements: [
+        "画像のレパートリーが少なく、より天気の詳細に関わる画像にすればよかった。",
+        "動く画像を入れてよりリッチにしたかった",
+      ],
+    },
+  },
+  {
+    id: 5,
+    slug: "weather-app",
+    title: "weather app",
+    thumb: "/works/weather/thumb.jpg",
+    logos: [
+      "/works/logos/javascript.svg",
+      "/works/logos/react.svg",
+      "/works/logos/nextjs.svg",
+    ],
+    detail: {
+      about: `お天気アプリ。
       昨日の天気と比べて変化を見たい人に向けて作成しました。
       また背景が現在の天気を反映して変化するため視覚的に天気を認識しやすくなっています。`,
       improvements: [
