@@ -10,7 +10,6 @@ import {
   DialogTrigger,
 } from "@/app/components/ui/dialog";
 import { useState } from "react";
-import Link from "next/link";
 import { ExternalLink } from "lucide-react";
 
 const WorksCard = ({ work }) => {
@@ -31,7 +30,7 @@ const WorksCard = ({ work }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="max-w-72 w-full mx-auto bg-normal rounded-xl flex flex-col items-center text-p-white shadow-lg  transition-all duration-200 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-500 ">
+        <div className="max-w-72 w-full mx-auto bg-normal rounded-xl flex flex-col items-center text-p-white shadow-lg transition-all duration-200 ease-in-out cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-gray-500">
           <div className="relative w-full flex justify-center">
             <Image
               className="w-64 h-52 object-cover my-3 mb-2 rounded-xl border-2 border-more-light"
@@ -41,13 +40,13 @@ const WorksCard = ({ work }) => {
               alt={work.title}
               priority
             />
-
             <div className="absolute right-4 bottom-3 flex gap-1.5">
               {work.logos.slice(0, 3).map((logo, index) => {
                 return (
                   <Image
                     key={index}
-                    src={logo}
+                    src={logo.src}
+                    title={logo.title}
                     width={30}
                     height={30}
                     alt=""
@@ -106,15 +105,50 @@ const WorksCard = ({ work }) => {
           </div>
 
           {/* ロゴ */}
-          <div className="flex gap-3 justify-center">
-            {currentWork.logos?.map((logo, index) => (
-              <div
-                key={index}
-                className="w-12 h-12 relative bg-p-white rounded-lg p-2 shadow-sm"
-              >
-                <Image src={logo} fill className="object-contain p-1" alt="" />
-              </div>
-            ))}
+          <div className="flex gap-3 justify-center flex-wrap">
+            {currentWork.logos?.map((logo, index) => {
+              // GitHubアイコン用（linkがある場合）
+              if (logo.link) {
+                return (
+                  <a
+                    key={index}
+                    href={logo.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center gap-1 group/logo"
+                  >
+                    <div className="w-12 h-12 relative bg-p-white rounded-lg p-2 shadow-sm group-hover/logo:shadow-md transition-all group-hover/logo:scale-110">
+                      <Image
+                        src={logo.src}
+                        fill
+                        className="object-contain p-1"
+                        alt={logo.title}
+                      />
+                    </div>
+                    <span className="text-xs text-p-white font-heebo">
+                      {logo.title}
+                    </span>
+                  </a>
+                );
+              }
+
+              // 通常のロゴ（linkがない場合）
+              return (
+                <div key={index} className="flex flex-col items-center gap-1">
+                  <div className="w-12 h-12 relative bg-p-white rounded-lg p-2 shadow-sm">
+                    <Image
+                      src={logo.src}
+                      fill
+                      className="object-contain p-1"
+                      alt={logo.title}
+                    />
+                  </div>
+                  <span className="text-xs text-p-white font-heebo">
+                    {logo.title}
+                  </span>
+                </div>
+              );
+            })}
           </div>
 
           {/* 概要 */}
