@@ -11,8 +11,8 @@ const Footer = () => {
         height={240}
         priority
       />
-      <p className="absolute left-1/2 -translate-x-1/2 bottom-2 font-heebo text-[8px] md:text-base text-p-white whitespace-nowrap">
-        © 2025 Arata Ishiguro Portfolio
+      <p className="absolute left-1/2 -translate-x-1/2 bottom-2 font-heebo text-xs md:text-base text-p-white whitespace-nowrap">
+        © 2026 Arata Ishiguro Portfolio
       </p>
     </footer>
   );

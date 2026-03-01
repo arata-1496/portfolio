@@ -18,7 +18,7 @@ const SectionTitle = ({ title, align = "left" }) => {
       ${alignmentClasses[align]}
       `}
     >
-      <p className="font-bebas text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px]leading-none text-[#204359] tracking-[0.07em]">
+      <p className="font-bebas text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[96px] leading-none text-[#204359] tracking-[0.07em]">
         {title}
       </p>
       <Image

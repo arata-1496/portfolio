@@ -1,4 +1,5 @@
 import SectionTitle from "../topPage/SectionTitle";
+import ScrollReveal from "../ScrollReveal";
 import Link from "next/link";
 import Image from "next/image";
 import WorksCarousel from "./WorksCarousel";
@@ -9,27 +10,33 @@ const WorksSection = () => {
       <SectionTitle title="WORKS" align="right" />
 
       <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-20">
-        <div className="w-full relative">
-          <WorksCarousel limit={3} />
-        </div>
+        {/* カルーセル：下からスライドイン */}
+        <ScrollReveal animation="slide-up" threshold={0.1}>
+          <div className="w-full relative">
+            <WorksCarousel limit={3} />
+          </div>
+        </ScrollReveal>
 
-        <div className="flex flex-col items-center mt-12 md:mt-16">
-          <Link
-            href="/works"
-            className="flex flex-col items-center gap-1 group"
-          >
-            <span className="font-bebas text-h3 text-more-deep group-hover:text-normal transition-colors">
-              MORE
-            </span>
-            <Image
-              src="/MV/waves-small.svg"
-              width={78}
-              height={10}
-              alt=""
-              className="w-auto h-auto"
-            />
-          </Link>
-        </div>
+        {/* MOREリンク：少し遅延させてフェードイン */}
+        <ScrollReveal animation="fade-in" delay={300} threshold={0.1}>
+          <div className="flex flex-col items-center mt-12 md:mt-16">
+            <Link
+              href="/works"
+              className="flex flex-col items-center gap-1 group"
+            >
+              <span className="font-bebas text-h3 text-more-deep group-hover:text-normal transition-colors">
+                MORE
+              </span>
+              <Image
+                src="/MV/waves-small.svg"
+                width={78}
+                height={10}
+                alt=""
+                className="w-auto h-auto"
+              />
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -14,10 +14,32 @@ module.exports = {
 					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' },
 				},
+				// スクロールアニメーション用キーフレーム
+				'scroll-slide-up': {
+					'0%': { opacity: '0', transform: 'translateY(50px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				},
+				'scroll-slide-left': {
+					'0%': { opacity: '0', transform: 'translateX(-50px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' },
+				},
+				'scroll-slide-right': {
+					'0%': { opacity: '0', transform: 'translateX(50px)' },
+					'100%': { opacity: '1', transform: 'translateX(0)' },
+				},
+				'scroll-fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				},
 			},
 			animation: {
 				'fade-in': 'fade-in 1.5s ease-out',
 				'fade-in-3s-delay-0.5s': 'fade-in 3s ease-out 0.5s forwards',
+				// スクロールアニメーション
+				'scroll-slide-up': 'scroll-slide-up 0.8s ease-out forwards',
+				'scroll-slide-left': 'scroll-slide-left 0.8s ease-out forwards',
+				'scroll-slide-right': 'scroll-slide-right 0.8s ease-out forwards',
+				'scroll-fade-in': 'scroll-fade-in 0.8s ease-out forwards',
 			},
 			// カスタムフォント
 			fontFamily: {
@@ -91,4 +113,3 @@ module.exports = {
   },
   plugins: [require("tailwindcss-animate")],
 }
-
