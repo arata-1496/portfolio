@@ -21,11 +21,8 @@ const ScrollReveal = ({
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          // 一度表示されたら監視を外す（再アニメーションしない）
-          observer.unobserve(entry.target);
-        }
+        // 画面に入ったら表示、画面から出たら非表示に戻す
+        setIsVisible(entry.isIntersecting);
       },
       { threshold }
     );

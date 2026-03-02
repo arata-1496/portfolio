@@ -111,5 +111,12 @@ module.exports = {
   		}
   	}
   },
+  // 動的クラス名はTailwindに検知されないため、明示的にリストアップする
+  safelist: [
+    'animate-scroll-slide-up',
+    'animate-scroll-slide-left',
+    'animate-scroll-slide-right',
+    'animate-scroll-fade-in',
+  ],
   plugins: [require("tailwindcss-animate")],
 }
