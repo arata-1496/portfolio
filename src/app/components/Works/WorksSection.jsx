@@ -7,18 +7,19 @@ import WorksCarousel from "./WorksCarousel";
 const WorksSection = () => {
   return (
     <section className="mt-32 md:mt-40 lg:mt-48 w-full relative pt-24 md:pt-32 lg:pt-40">
-      <SectionTitle title="WORKS" align="right" />
+      {/* タイトル：右から */}
+      <SectionTitle title="WORKS" align="right" animation="slide-right" />
 
       <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-20">
-        {/* カルーセル：下からスライドイン */}
-        <ScrollReveal animation="slide-up" threshold={0.1}>
+        {/* カルーセル：右から */}
+        <ScrollReveal animation="slide-right" delay={100} threshold={0.3}>
           <div className="w-full relative">
             <WorksCarousel limit={3} />
           </div>
         </ScrollReveal>
 
-        {/* MOREリンク：少し遅延させてフェードイン */}
-        <ScrollReveal animation="fade-in" delay={300} threshold={0.1}>
+        {/* MOREリンク：右から（少し遅延） */}
+        <ScrollReveal animation="slide-right" delay={250} threshold={0.3}>
           <div className="flex flex-col items-center mt-12 md:mt-16">
             <Link
               href="/works"

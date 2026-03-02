@@ -6,7 +6,7 @@ const ContactPage = () => {
     <div
       className="min-h-screen bg-no-repeat bg-contain"
       style={{
-        backgroundImage: 'url("/MV/wave-brower.svg")',
+        backgroundImage: 'url("/MV/wave-static.svg")',
         backgroundPosition: "top 200px center",
       }}
     >

@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #fafafa;
 }
@@ -78,4 +82,36 @@ body {
 
   }
 
+}
+
+/* 波アニメーション（WaveBackground.jsx で使用） */
+/* CodePenのvaluesを参考に：各レイヤーが違う方向・速度でゆらゆら動く */
+@keyframes wave-layer-1 {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(12%);
+  }
+}
+
+@keyframes wave-layer-2 {
+  0%,
+  100% {
+    transform: translateX(-8%);
+  }
+  60% {
+    transform: translateX(10%);
+  }
+}
+
+@keyframes wave-layer-3 {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  40% {
+    transform: translateX(-6%);
+  }
 }

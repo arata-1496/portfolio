@@ -35,11 +35,11 @@ module.exports = {
 			animation: {
 				'fade-in': 'fade-in 1.5s ease-out',
 				'fade-in-3s-delay-0.5s': 'fade-in 3s ease-out 0.5s forwards',
-				// スクロールアニメーション
-				'scroll-slide-up': 'scroll-slide-up 0.8s ease-out forwards',
-				'scroll-slide-left': 'scroll-slide-left 0.8s ease-out forwards',
-				'scroll-slide-right': 'scroll-slide-right 0.8s ease-out forwards',
-				'scroll-fade-in': 'scroll-fade-in 0.8s ease-out forwards',
+				// スクロールアニメーション（bothにすることでdelay中もopacity:0を保持してチカチカを防ぐ）
+				'scroll-slide-up': 'scroll-slide-up 0.8s ease-out both',
+				'scroll-slide-left': 'scroll-slide-left 0.8s ease-out both',
+				'scroll-slide-right': 'scroll-slide-right 0.8s ease-out both',
+				'scroll-fade-in': 'scroll-fade-in 0.8s ease-out both',
 			},
 			// カスタムフォント
 			fontFamily: {

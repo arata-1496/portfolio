@@ -6,12 +6,13 @@ import { Mail, SquareArrowOutUpRight } from "lucide-react";
 const Contact = () => {
   return (
     <section className="mt-32 md:mt-40 lg:mt-48 w-full min-h-[60vh] relative">
-      <SectionTitle title="CONTACT" align="left" />
+      {/* タイトル：左から */}
+      <SectionTitle title="CONTACT" align="left" animation="slide-left" />
 
       <div className="max-w-7xl mx-auto pt-32 md:pt-40 lg:pt-48 px-4 md:px-8">
         <div className="max-w-2xl mx-auto flex flex-col items-center justify-center gap-8 text-center">
-          {/* メッセージ：下からスライドイン */}
-          <ScrollReveal animation="slide-up" threshold={0.2}>
+          {/* メッセージ：左から */}
+          <ScrollReveal animation="slide-left" delay={100} threshold={0.3}>
             <div className="space-y-4">
               <p className="font-noto text-base md:text-lg text-more-deep leading-relaxed">
                 ご質問・ご依頼など、
@@ -21,9 +22,8 @@ const Contact = () => {
             </div>
           </ScrollReveal>
 
-          {/* ボタン：少し遅延させてフェードイン */}
-          <ScrollReveal animation="slide-up" delay={200} threshold={0.2}>
-            {/* Google Formへのボタン */}
+          {/* ボタン：左から（少し遅延） */}
+          <ScrollReveal animation="slide-left" delay={250} threshold={0.3}>
             <a
               href="https://forms.gle/BiityrYFCW4PTpEj8"
               target="_blank"
@@ -55,8 +55,8 @@ const Contact = () => {
             </a>
           </ScrollReveal>
 
-          {/* 補足テキスト */}
-          <ScrollReveal animation="fade-in" delay={400} threshold={0.2}>
+          {/* 補足テキスト：左から（さらに遅延） */}
+          <ScrollReveal animation="slide-left" delay={400} threshold={0.3}>
             <a
               href="https://forms.gle/BiityrYFCW4PTpEj8"
               target="_blank"

@@ -13,16 +13,23 @@ const ScrollReveal = ({
   className = "",
   animation = "slide-up",
   delay = 0,
-  threshold = 0.15,
+  threshold = 0.3,
 }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const isAnimating = useRef(false); // アニメーション中かどうかを追跡
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // 画面に入ったら表示、画面から出たら非表示に戻す
-        setIsVisible(entry.isIntersecting);
+        if (entry.isIntersecting) {
+          // 画面に入ったら表示＆アニメーション中フラグを立てる
+          setIsVisible(true);
+          isAnimating.current = true;
+        } else if (!isAnimating.current) {
+          // アニメーション中でなければ非表示に戻す
+          setIsVisible(false);
+        }
       },
       { threshold }
     );
@@ -35,6 +42,11 @@ const ScrollReveal = ({
     };
   }, [threshold]);
 
+  const handleAnimationEnd = () => {
+    // アニメーション完了後にフラグを解除（次に画面外に出たら非表示に戻れる）
+    isAnimating.current = false;
+  };
+
   return (
     <div
       ref={ref}
@@ -43,6 +55,7 @@ const ScrollReveal = ({
         ${className}
       `}
       style={{ animationDelay: `${delay}ms` }}
+      onAnimationEnd={handleAnimationEnd}
     >
       {children}
     </div>

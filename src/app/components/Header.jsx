@@ -20,15 +20,13 @@ const Header = ({ pageType }) => {
     <header className="fixed top-5 left-0 w-full z-20">
       <div className="flex max-w-full mx-auto h-full justify-between items-center px-4 md:px-8 lg:px-40">
         {/* ロゴ */}
-        {pageType === "other" && (
-          <Image
-            src="/MV/icon.svg"
-            width={317}
-            height={60}
-            alt="icon"
-            className="w-48 md:w-64 lg:w-80 h-auto"
-          />
-        )}
+        <Image
+          src="/MV/icon.svg"
+          width={317}
+          height={60}
+          alt="icon"
+          className={`w-48 md:w-64 lg:w-80 h-auto ${pageType !== "other" ? "opacity-0 pointer-events-none" : ""}`}
+        />
         {/* PC用nav（lg以上で表示する） */}
         <nav className="hidden lg:flex ml-auto">
           <ul className="flex gap-8 list-none p-0">

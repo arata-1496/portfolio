@@ -7,7 +7,7 @@ const WorksPage = () => {
     <div
       className="min-h-screen bg-no-repeat bg-contain bg-top"
       style={{
-        backgroundImage: 'url("/MV/wave-brower.svg")',
+        backgroundImage: 'url("/MV/wave-static.svg")',
         backgroundPosition: "top 200px center", // ヘッダー分下げる
       }}
     >
