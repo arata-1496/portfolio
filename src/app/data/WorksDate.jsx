@@ -28,6 +28,39 @@ export const WorksDate = [
     },
   },
   {
+    id: 2,
+    slug: "sea-book",
+    title: "うみの生き物図鑑",
+    thumb: "/works/sea-book/thumb.png",
+    logos: [
+      { src: "/logos/nextjs.svg", title: "Next.js" },
+      { src: "/logos/supabase.svg", title: "supabase" },
+      { src: "/logos/tailwind.svg", title: "tailwind" },
+      { src: "/logos/shadcn.svg", title: "shadcn" },
+      {
+        src: "/logos/github.svg",
+        title: "GitHub",
+        link: "https://github.com/arata-1496/sea-book",
+      },
+    ],
+    url: "https://sea-book.vercel.app/",
+    detail: {
+      about: `海の生き物クイズ図鑑アプリ。
+      構想からデザイン、実装まで一から制作しました。
+      低学年のこども向け。
+      ログイン機能や回答数によって図鑑の生き物が変化するレアリティを導入し飽き対策もしました。
+      音声認証APIも取り入れ、入力できない子供でも楽しめる設計にしました。
+      DBからデータ抽出するフック作成にかなり苦戦しました。
+      いつでも子供に楽しんでもらえるようPWAも実装しました。`,
+      improvements: [
+        "生き物が連続で出ることがあり、確率を変動できるようにすればよかった。",
+        "ユーザーの削除機能もつけれればよりよかった。",
+      ],
+    },
+  },
+
+  {
+    id: 3,
     slug: "bbs-app",
     title: "掲示板アプリ",
     thumb: "/works/bbs/thumb.png",
@@ -54,7 +87,7 @@ export const WorksDate = [
     },
   },
   {
-    id: 3,
+    id: 4,
     slug: "jyanken-app",
     title: "じゃんけんアプリ",
     thumb: "/works/jyanken/thumb.png",
@@ -85,14 +118,19 @@ export const WorksDate = [
     },
   },
   {
-    id: 4,
+    id: 5,
     slug: "milk-app",
     title: "ミルク記録アプリ",
     thumb: "/works/milk/thumb.png",
     logos: [
       { src: "/logos/react.svg", title: "React" },
-      { src: "/logos/github.svg", title: "GitHub" },
+      {
+        src: "/logos/github.svg",
+        title: "GitHub",
+        link: "https://github.com/arata-1496/milk-todo",
+      },
     ],
+    url: "https://milk-todo.vercel.app/",
     detail: {
       about: `赤ちゃんが飲んだミルクの量を計算し記録するアプリ。
       ３時間おきのミルクで日々記録が億劫になってしまうパパママに向けたアプリです。
@@ -105,17 +143,22 @@ export const WorksDate = [
     },
   },
   {
-    id: 5,
-    slug: "（ダミー）todo-app",
-    title: "Todoアプリ",
-    thumb: "/works/todo/thumb.jpg",
+    id: 6,
+    slug: "weather-clock",
+    title: "weather-clock",
+    thumb: "/works/weather/thumb.png",
     logos: [
       { src: "/logos/react.svg", title: "React" },
-      { src: "/logos/nextjs.svg", title: "Next.js" },
+      {
+        src: "/logos/github.svg",
+        title: "GitHub",
+        link: "https://github.com/arata-1496/weather-unsplash-app",
+      },
     ],
+    url: "https://weather-unsplash-app.vercel.app/",
     detail: {
-      about: `Todoアプリ。
-      昨日の天気と比べて変化を見たい人に向けて作成しました。
+      about: `現在地の天気入り時計。
+      現在地の情報から、unsplashAPIを使用し、現在の天気に近い画像を取得し表示しています。
       また背景が現在の天気を反映して変化するため視覚的に天気を認識しやすくなっています。`,
       improvements: [
         "画像のレパートリーが少なく、より天気の詳細に関わる画像にすればよかった。",
@@ -124,22 +167,24 @@ export const WorksDate = [
     },
   },
   {
-    id: 6,
-    slug: "abc-app",
-    title: "ABCアプリ",
-    thumb: "/works/abc/thumb.jpg",
+    id: 7,
+    slug: "react-weather",
+    title: "お天気アプリ",
+    thumb: "/works/react-weather/thumb.png",
     logos: [
-      { src: "/logos/nextjs.svg", title: "Next.js" },
-      { src: "/logos/nextjs.svg", title: "Next.js" },
+      { src: "/logos/react.svg", title: "React" },
+      {
+        src: "/logos/github.svg",
+        title: "GitHub",
+        link: "https://github.com/arata-1496/react-weather",
+      },
     ],
+    url: "https://react-weather-flame-pi.vercel.app/",
     detail: {
-      about: `ABCアプリ。
-      昨日の天気と比べて変化を見たい人に向けて作成しました。
-      また背景が現在の天気を反映して変化するため視覚的に天気を認識しやすくなっています。`,
-      improvements: [
-        "画像のレパートリーが少なく、より天気の詳細に関わる画像にすればよかった。",
-        "動く画像を入れてよりリッチにしたかった",
-      ],
+      about: `お天気アプリ。
+      調べたい都市を入力し、その日の天気をAPIで取得する。
+      APIの取得練習で制作しました。`,
+      improvements: ["text", "text"],
     },
   },
 ];
