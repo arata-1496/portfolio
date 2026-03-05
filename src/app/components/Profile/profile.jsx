@@ -14,7 +14,7 @@ const Profile = () => {
           <ScrollReveal animation="slide-left" delay={100} threshold={0.3}>
             <Image
               className="w-full md:w-[382px] h-auto md:h-[264px] bg-[#c1d4d9] rounded-[10px] object-cover"
-              src="/works/abc/thumb.jpg"
+              src="/MV/profile-image.jpg"
               width={382}
               height={264}
               alt=""
